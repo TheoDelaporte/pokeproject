@@ -1,4 +1,5 @@
 <?php
+
 declare(strict_types=1);
 
 use Migrations\AbstractMigration;
@@ -34,6 +35,21 @@ class CreatePokemons extends AbstractMigration
             'default' => null,
             'limit' => 255,
             'null' => false,
+        ]);
+        $table->addColumn('default_back_sprite_url', 'string', [
+            'default' => null,
+            'limit' => 255,
+            'null' => true,
+        ]);
+        $table->addColumn('shiny_front_sprite_url', 'string', [
+            'default' => null,
+            'limit' => 255,
+            'null' => true,
+        ]);
+        $table->addColumn('shiny_back_sprite_url', 'string', [
+            'default' => null,
+            'limit' => 255,
+            'null' => true,
         ]);
         $table->addColumn('created', 'datetime', [
             'default' => null,
